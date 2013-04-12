@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Descripton</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tarefas.each do |tarefa| %>
+  <tr>
+    <td><%= tarefa.name %> <% if tarefa.urgent %> <i>Urgente </i> <% end %> </td>
+    <td><%= tarefa.descripton %></td>
+    <td><%= tarefa.status %></td>
+    <td><%= link_to 'Show', tarefa %></td>
+    <td><%= link_to 'Edit', edit_tarefa_path(tarefa) %></td>
+    <td><%= link_to 'Destroy', tarefa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= pluralize(tarefa.comments.size, "comentario") %>
+  </tr>
+
+<% end %>
+</table>
+

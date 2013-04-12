@@ -1,0 +1,8 @@
+<h1>Listing Urgent tarefas</h1>
+
+<%= render :partial => 'tarefa' %>
+<%= will_paginate @tarefas %>
+
+<br />
+
+<%= link_to 'Listar todas as tarefas', tarefas_path %>

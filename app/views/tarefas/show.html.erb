@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tarefa.name %>
+</p>
+
+<p>
+  <b>Descripton:</b>
+  <%= @tarefa.descripton %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @tarefa.status %>
+</p>
+
+<h2>Comentários</h2>
+
+<%= render @tarefa.comments %>
+
+<h2> Entre com novo comentário </h2>
+<%= render "comments/form" %>
+
+<%= link_to 'Edit', edit_tarefa_path(@tarefa) %> |
+<%= link_to 'Back', tarefas_path %>
